@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+	<hibernate-configuration>
+	<session-factory>
+	
+	<!--  Connection Properties  -->
+<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://localhost:3306/hibernate21</property>
+<property name="connection.user">root</property>
+<property name="connection.password">Charan@30M</property>
+
+<!--  Hibernate Properties  -->
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
+<property name="hibernate.show_sql">true</property>
+	
+<!-- 	hibernate CRUD Operations -->
+
+	<mapping class="CRUDOperations.Faculty"/>
+	
+<!-- 	HQL -->
+	<mapping class="HQLDemo.Product"/>
+		
+<!-- 	HCQL -->
+    <mapping class="HCQLDemo.Student"/>
+    
+    
+<!-- 	inheritance Mapping -->
+
+
+	    <mapping class="InheritanceMapping.Person"/>
+		<mapping class="InheritanceMapping.Teacher"/>
+		<mapping class="InheritanceMapping.Scholar"/>
+		
+<!-- Generator Class -->
+
+<mapping class="GeneratorClassDemo.Employee"/>
+</session-factory>
+	
+	</hibernate-configuration>
